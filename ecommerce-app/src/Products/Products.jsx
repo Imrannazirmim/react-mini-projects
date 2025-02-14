@@ -1,8 +1,8 @@
-import React from 'react'
-
-const Products = () => {
-    return (
-        <div>Products</div>
-    )
-}
-export default Products
+const Products = ({ result }) => {
+  return (
+    <>
+      <section className="w-[70%] flex flex-wrap mx-auto">{result}</section>
+    </>
+  );
+};
+export default Products;

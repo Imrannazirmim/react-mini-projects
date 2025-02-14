@@ -3,6 +3,8 @@ import axios from 'axios';
 
 const Meals = () => {
   const [items, setItems] = useState([]);
+  const [count,setCount] = useState(0)
+
 
   useEffect(() => {
     axios
