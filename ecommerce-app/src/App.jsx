@@ -12,8 +12,8 @@ const App = () => {
   const handleChangeInput = (e) => {
     setQuery(e.target.value);
   };
-  //input filter
 
+  //input filter
   const filterItems = products.filter(
     (product) =>
       product.title.toLocaleLowerCase().indexOf(query.toLocaleLowerCase()) !==
