@@ -7,7 +7,7 @@ const Tabs = () => {
   const [activeTab, setActiveTab] = useState("home");
   const [isPending, startTransition] = useTransition();
 
-  const handleTabChange = (tab) => {
+  const handleTabChange = (tab: any) => {
     startTransition(() => {
       setActiveTab(tab);
     });
@@ -26,6 +26,7 @@ const Tabs = () => {
         return <Home />;
     }
   };
+
   return (
     <div>
       <button onClick={() => handleTabChange("home")}>Home</button>
