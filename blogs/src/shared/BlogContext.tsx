@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, {createContext, useContext, useState} from "react";
 import { Blog } from "../types";
 
 //define blogcontext type

@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Nav from "./Navigation/Nav.jsx";
 import Products from "./Products/Products.jsx";
 import Recommended from "./Recommended/Recommended.jsx";
 import Sidebar from "./Sidebar/Sidebar.jsx";
 import products from "./db/data.jsx";
 import Card from "./components/Card.jsx";
+
+//this is data fetching catch
 
 const App = () => {
   const [selectCategory, setSelectedCategory] = useState(null);
