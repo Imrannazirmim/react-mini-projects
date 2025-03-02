@@ -3,6 +3,7 @@ import Table from "./Table";
 
 
 const Dashboard = () => {
+
   return <div className="flex">
     <div className="flex h-screen">
     <Sidebar/>

@@ -20,7 +20,7 @@ const Table = () => {
     email: "",
     country: "",
     project: "",
-    stattus: "",
+    status: "",
   });
   const [statusDropdownVisible, setStatusDropdownVisible] = useState<
     number | null
@@ -66,7 +66,7 @@ const Table = () => {
             status: newStatus,
             progress: newStatus === "Completed" ? "100%" : project.progress,
           }
-        : project
+        : project,
     );
     setProjects(updateProjects);
     setStatusDropdownVisible(null);
@@ -76,7 +76,7 @@ const Table = () => {
     (project) =>
       searchQuery === "" ||
       (Object.values(project).some((value) =>
-        value.toLowerCase().includes(searchQuery.toLowerCase())
+        value.toLowerCase().includes(searchQuery.toLowerCase()),
       ) &&
         filters.name === "") ||
       (project.country.toLowerCase().includes(filters.country.toLowerCase()) &&
@@ -85,7 +85,7 @@ const Table = () => {
         filters.project === "") ||
       (project.project.toLowerCase().includes(filters.project.toLowerCase()) &&
         filters.stattus === "") ||
-      project.status.toLowerCase().includes(filters.stattus.toLowerCase())
+      project.status.toLowerCase().includes(filters.stattus.toLowerCase()),
   );
   //pagination
   const [currentPage, setCurrentPage] = useState(1);
@@ -93,7 +93,7 @@ const Table = () => {
   const startIndex = (currentPage - 1) * itemsPerPage;
   const currentProjects = filteredProjects.slice(
     startIndex,
-    startIndex + itemsPerPage
+    startIndex + itemsPerPage,
   );
 
   const totalPages = Math.ceil(filteredProjects.length / itemsPerPage);
